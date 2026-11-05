@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <a href="https://real-time-audio-streaming-application.onrender.com">Live Demo</a>
+  <a href="streamify-music-app-kappa.vercel.app">Live Demo</a>
   ·
   <a href="https://github.com/thvvamshi/Real-time_audio_streaming_application">Repository</a>
 </p>
