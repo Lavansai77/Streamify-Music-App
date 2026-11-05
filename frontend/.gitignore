@@ -1,0 +1,26 @@
+# Environment variables - keep real credentials private
+.env
+.env.*
+!.env.sample
+!.env.example
+
+# Dependencies
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+
+# Build files
+dist/
+build/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temporary files
+tmp/
+temp/
+
+# OS and editor files
+.DS_Store
+Thumbs.db

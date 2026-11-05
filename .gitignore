@@ -1,0 +1,25 @@
+@'
+# Environment files
+.env
+.env.*
+!.env.sample
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Build files
+dist/
+build/
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+temp/
+
+# OS files
+.DS_Store
+Thumbs.db
+'@ | Set-Content -Path .gitignore

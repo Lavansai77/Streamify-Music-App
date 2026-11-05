@@ -1,0 +1,146 @@
+[1mdiff --git a/backend/.env.sample b/backend/.env.sample[m
+[1mindex b26f052..e6ee7ca 100644[m
+[1m--- a/backend/.env.sample[m
+[1m+++ b/backend/.env.sample[m
+[36m@@ -1,11 +1,11 @@[m
+ PORT=5000[m
+[31m-MONGODB_URI=mongodb+srv://bandarilavansai_db_user:4FFTob342bfL1Y5n@cluster0.nzczar3.mongodb.net/?retryWrites=true&w=majority[m
+[31m-ADMIN_EMAIL=bandarilavansai@gmail.com[m
+[32m+[m[32mMONGODB_URI=your_mongodb_connection_string[m
+[32m+[m[32mADMIN_EMAIL=yoour_admin_mail[m
+ NODE_ENV=development[m
+ [m
+[31m-CLOUDINARY_API_KEY=549331719395793[m
+[31m-CLOUDINARY_API_SECRET=O61S1s-bSHQNpFdmb-Mqrj7wFoc[m
+[31m-CLOUDINARY_CLOUD_NAME=diajcckzf[m
+[32m+[m[32mCLOUDINARY_API_KEY=your_cloudinary_api_key[m
+[32m+[m[32mCLOUDINARY_API_SECRET=your_cloudinary_secret_key[m
+[32m+[m[32mCLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name[m
+ [m
+[31m-CLERK_PUBLISHABLE_KEY=pk_test_ZXF1YWwtYmxvd2Zpc2gtNTQyMi5jbGVyay5hY2NvdW50cy5kZXYk[m
+[31m-CLERK_SECRET_KEY=sk_test_qe8xF8JzqaFC4PAI03WIGCWvY56tgtVcHUT20wonul[m
+\ No newline at end of file[m
+[32m+[m[32mCLERK_PUBLISHABLE_KEY=your_clerk_publishable_key[m
+[32m+[m[32mCLERK_SECRET_KEY=your_clerk_secret_key[m
+\ No newline at end of file[m
+[1mdiff --git a/backend/.gitignore b/backend/.gitignore[m
+[1mindex d881e6c..2aa56dd 100644[m
+[1m--- a/backend/.gitignore[m
+[1m+++ b/backend/.gitignore[m
+[36m@@ -1,29 +1,26 @@[m
+[31m-# Logs[m
+[31m-logs[m
+[31m-*.log[m
+[31m-npm-debug.log*[m
+[31m-yarn-debug.log*[m
+[31m-yarn-error.log*[m
+[31m-[m
+[31m-# Dependencies[m
+[31m-node_modules[m
+[31m-[m
+[31m-# Environment variables[m
+[32m+[m[32m# Environment variables - keep real credentials private[m
+ .env[m
+ .env.*[m
+[32m+[m[32m!.env.sample[m
+ !.env.example[m
+ [m
+[31m-# Temporary upload directory[m
+[31m-tmp[m
+[32m+[m[32m# Dependencies[m
+[32m+[m[32mnode_modules/[m
+[32m+[m[32mbackend/node_modules/[m
+[32m+[m[32mfrontend/node_modules/[m
+ [m
+ # Build files[m
+[31m-dist[m
+[32m+[m[32mdist/[m
+[32m+[m[32mbuild/[m
+ [m
+[31m-# OS files[m
+[31m-.DS_Store[m
+[31m-Thumbs.db[m
+[32m+[m[32m# Logs[m
+[32m+[m[32m*.log[m
+[32m+[m[32mnpm-debug.log*[m
+[32m+[m
+[32m+[m[32m# Temporary files[m
+[32m+[m[32mtmp/[m
+[32m+[m[32mtemp/[m
+ [m
+[31m-# IDE[m
+[31m-.vscode/*[m
+[31m-!.vscode/extensions.json[m
+[31m-.idea[m
+\ No newline at end of file[m
+[32m+[m[32m# OS and editor files[m
+[32m+[m[32m.DS_Store[m
+[32m+[m[32mThumbs.db[m
+\ No newline at end of file[m
+[1mdiff --git a/frontend/.env.sample b/frontend/.env.sample[m
+[1mindex f805550..bac441f 100644[m
+[1m--- a/frontend/.env.sample[m
+[1m+++ b/frontend/.env.sample[m
+[36m@@ -1 +1 @@[m
+[31m-VITE_CLERK_PUBLISHABLE_KEY=pk_test_ZXF1YWwtYmxvd2Zpc2gtNTQyMi5jbGVyay5hY2NvdW50cy5kZXYk[m
+\ No newline at end of file[m
+[32m+[m[32mVITE_CLERK_PUBLISHABLE_KEY=your_clerk_publish_key[m
+\ No newline at end of file[m
+[1mdiff --git a/frontend/.gitignore b/frontend/.gitignore[m
+[1mindex 8e244d2..2aa56dd 100644[m
+[1m--- a/frontend/.gitignore[m
+[1m+++ b/frontend/.gitignore[m
+[36m@@ -1,32 +1,26 @@[m
+[31m-# Logs[m
+[31m-logs[m
+[31m-*.log[m
+[31m-npm-debug.log*[m
+[31m-yarn-debug.log*[m
+[31m-yarn-error.log*[m
+[31m-pnpm-debug.log*[m
+[31m-lerna-debug.log*[m
+[32m+[m[32m# Environment variables - keep real credentials private[m
+[32m+[m[32m.env[m
+[32m+[m[32m.env.*[m
+[32m+[m[32m!.env.sample[m
+[32m+[m[32m!.env.example[m
+ [m
+ # Dependencies[m
+[31m-node_modules[m
+[32m+[m[32mnode_modules/[m
+[32m+[m[32mbackend/node_modules/[m
+[32m+[m[32mfrontend/node_modules/[m
+ [m
+[31m-# Build output[m
+[31m-dist[m
+[31m-dist-ssr[m
+[32m+[m[32m# Build files[m
+[32m+[m[32mdist/[m
+[32m+[m[32mbuild/[m
+ [m
+[31m-# Environment variables[m
+[31m-.env[m
+[31m-.env.*[m
+[31m-!.env.example[m
+[32m+[m[32m# Logs[m
+[32m+[m[32m*.log[m
+[32m+[m[32mnpm-debug.log*[m
+ [m
+[31m-# Editor directories and files[m
+[31m-.vscode/*[m
+[31m-!.vscode/extensions.json[m
+[31m-.idea[m
+[32m+[m[32m# Temporary files[m
+[32m+[m[32mtmp/[m
+[32m+[m[32mtemp/[m
+ [m
+[31m-# OS files[m
+[32m+[m[32m# OS and editor files[m
+ .DS_Store[m
+[31m-Thumbs.db[m
+[31m-[m
+[31m-# Local files[m
+[31m-*.local[m
+\ No newline at end of file[m
+[32m+[m[32mThumbs.db[m
+\ No newline at end of file[m
