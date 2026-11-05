@@ -17,7 +17,7 @@
 </p>
 
 <p align="center">
-  <a href="streamify-music-app-kappa.vercel.app">Live Demo</a>
+  <a href="https://streamify-music-app-kappa.vercel.app/">Live Demo</a>
   ·
   <a href="https://github.com/Lavansai77/Streamify-Music-App.git">Repository</a>
 </p>
