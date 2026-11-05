@@ -62,13 +62,17 @@ app.use((req, res, next) => {
   next();
 });
 
-// CORS
+
 app.use(
   cors({
-    origin: true,
+    origin: [
+      "http://localhost:3000",
+      "https://streamify-music-app-kappa.vercel.app",
+    ],
     credentials: true,
   })
 );
+
 
 // Body Parser
 app.use(express.json());
